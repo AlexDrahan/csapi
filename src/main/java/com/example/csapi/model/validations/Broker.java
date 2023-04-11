@@ -21,7 +21,7 @@ public class Broker {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     @Min(value = 0)
-     short id;
+     Short id;
 
     @NotBlank(message = "Broker name cannot be blank")
     String brokerName;

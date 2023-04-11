@@ -1,6 +1,6 @@
 package com.example.csapi.model.enums;
 
-import com.example.webgw.model.LiftGateDetails;
+import com.example.csapi.model.LiftGateDetails;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

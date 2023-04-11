@@ -1,4 +1,4 @@
-package com.example.csapi;
+package com.example.csapi.model;
 
 import jakarta.persistence.*;
 import jakarta.persistence.criteria.Order;

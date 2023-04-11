@@ -1,4 +1,4 @@
-package com.example.csapi;
+package com.example.csapi.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
