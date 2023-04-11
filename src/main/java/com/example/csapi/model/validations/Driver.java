@@ -1,7 +1,7 @@
-package com.example.csapi.model;
+package com.example.csapi.model.validations;
 
 
-import com.example.webgw.model.enums.WorkDocuments;
+import com.example.csapi.model.enums.WorkDocuments;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
