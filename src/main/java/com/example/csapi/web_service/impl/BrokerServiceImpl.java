@@ -21,7 +21,7 @@ public class BrokerServiceImpl implements BrokerService {
     }
 
     @Override
-    public Broker updateBroker(Short id, Broker broker) {
+    public Broker updateBroker(String id, Broker broker) {
         Broker brokerToUpdate = findBrokerOptional(id);
         brokerToUpdate.setBrokerName(broker.getBrokerName());
         brokerToUpdate.setCompanyName(broker.getCompanyName());
@@ -39,12 +39,12 @@ public class BrokerServiceImpl implements BrokerService {
     }
 
     @Override
-    public void deleteBroker(Short id) {
+    public void deleteBroker(String id) {
         brokerRepository.delete(findBrokerOptional(id));
     }
 
     @Override
-    public Broker findBroker(Short id) {
+    public Broker findBroker(String id) {
         return findBrokerOptional(id);
     }
 
@@ -76,7 +76,7 @@ public class BrokerServiceImpl implements BrokerService {
         }
     }
 
-    private Broker findBrokerOptional(Short id) {
+    private Broker findBrokerOptional(String id) {
         Optional<Broker> optionalBroker = brokerRepository.findById(id);
         if (optionalBroker.isPresent()) {
             return optionalBroker.get();

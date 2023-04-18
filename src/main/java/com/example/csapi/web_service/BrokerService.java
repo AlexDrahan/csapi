@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface BrokerService {
     Broker createBroker(Broker broker);
-    Broker updateBroker(Short id, Broker broker);
-    void deleteBroker(Short id);
-    Broker findBroker(Short id);
+    Broker updateBroker(String id, Broker broker);
+    void deleteBroker(String id);
+    Broker findBroker(String id);
     Broker findBrokerByMC(String mcNumber);
     List<Broker> findBrokerByCompanyName(String brokerName);
     List<Broker> findAllBrokers();
