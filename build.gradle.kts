@@ -30,6 +30,10 @@ dependencies {
     testImplementation("org.springframework.kafka:spring-kafka-test")
     testImplementation("org.springframework.security:spring-security-test")
     implementation("in.hiaust:unitedstates:1.1")
+    // https://mvnrepository.com/artifact/com.google.maps/google-maps-services
+    implementation("com.google.maps:google-maps-services:2.2.0")
+    implementation("com.google.appengine:appengine-api-1.0-sdk:2.0.10")
+    implementation("org.slf4j:slf4j-simple:1.7.25")
 }
 
 tasks.withType<Test> {
