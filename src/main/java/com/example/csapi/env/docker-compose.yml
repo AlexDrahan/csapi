@@ -1,31 +1,7 @@
-version: '3.8'
-
+version: '3.3'
 services:
-  oracle-db:
-    image: sath89/oracle-12c
+  mongodb:
+    image: 'mongo:4.4'
+    container_name: mongodb
     ports:
-      - "1521:1521"
-      - "5500:5500"
-    environment:
-      - DBCA_TOTAL_MEMORY=2048
-      - ORACLE_PWD=yourpassword
-    volumes:
-      - ./scripts:/docker-entrypoint-initdb.d
-    networks:
-      - oracle-network
-
-  app:
-    build: .
-    ports:
-      - "8080:8080"
-    environment:
-      - SPRING_DATASOURCE_URL=jdbc:oracle:thin:@oracle-db:1521/ORCLCDB.localdomain
-      - SPRING_DATASOURCE_USERNAME=system
-      - SPRING_DATASOURCE_PASSWORD=yourpassword
-    depends_on:
-      - oracle-db
-    networks:
-      - oracle-network
-
-networks:
-  oracle-network:
+      - "27017:27017"
