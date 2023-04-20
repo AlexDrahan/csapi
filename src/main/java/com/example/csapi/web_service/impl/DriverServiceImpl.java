@@ -1,5 +1,7 @@
 package com.example.csapi.web_service.impl;
 
+import com.example.csapi.exceptions.DriverNotFoundException;
+import com.example.csapi.exceptions.LicenseExpiredException;
 import com.example.csapi.exceptions.NoSuchDriverException;
 import com.example.csapi.model.Bid;
 import com.example.csapi.model.Location;
@@ -60,6 +62,16 @@ public class DriverServiceImpl implements DriverService {
             return optionalDriver.get();
         } else {
             throw new NoSuchDriverException("No driver with unit: " + id + " was found");
+        }
+    }
+
+    public void deactivateDriverIfLicenseExpired(String driverId) throws LicenseExpiredException {
+        Driver driver = driverRepository.findById(driverId).orElseThrow(() -> new DriverNotFoundException(driverId));
+        if (driver.isLicenseValid()) {
+            driver.deactivateDriver();
+            driverRepository.save(driver);
+        } else {
+            throw new LicenseExpiredException(driverId);
         }
     }
 

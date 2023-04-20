@@ -11,6 +11,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.FieldType;
 import org.springframework.data.mongodb.core.mapping.MongoId;
 
+import java.time.LocalDate;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -34,5 +36,16 @@ public class Driver {
     private String details;
     private WorkDocuments workDocuments;
     private Location currentLocation;
+    private boolean isActive;
 
+    private LocalDate licenseExpirationDate;
+
+    public boolean isLicenseValid() {
+        return licenseExpirationDate.isAfter(LocalDate.now());
+    }
+
+    public void deactivateDriver() {
+        isActive = false;
+    }
 }
+
