@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Coverages {
+public class    Coverages {
     private String policyNumber;
 
     /*The Extended Fund Facility (EFF) provides financial assistance to countries facing
