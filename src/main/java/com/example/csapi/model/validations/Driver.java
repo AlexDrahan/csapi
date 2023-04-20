@@ -1,6 +1,7 @@
 package com.example.csapi.model.validations;
 
 
+import com.example.csapi.model.CarData;
 import com.example.csapi.model.documets.Coi;
 import com.example.csapi.model.Location;
 import com.example.csapi.model.enums.WorkDocuments;
@@ -24,15 +25,15 @@ public class Driver {
     private String driverLastName;
     private String driverPhoneNumber;
     private String driverEmail;
+    private CarData carData;
 
     //Certificate of Insurance
     private Coi cInsurance;
     private String homeLocation;
-    boolean isTeam;
-    boolean isTracked;
-    boolean canadaFreights;
-    private String details;
-    private WorkDocuments workDocuments;
     private Location currentLocation;
-
+    private boolean isTeam;
+    private boolean isTracked;
+    private boolean canadaFreights;
+    private WorkDocuments workDocuments;
+    private String details;
 }
