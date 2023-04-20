@@ -7,10 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CarDimensions {
+public class Dimensions {
     double length;
     double width;
     double height;
-    double doorWidth;
-    double doorLength;
 }

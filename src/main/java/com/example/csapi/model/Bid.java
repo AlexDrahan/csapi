@@ -15,6 +15,7 @@ public class Bid {
 
     @MongoId(FieldType.OBJECT_ID)
     private String id;
+    private String driverId;
     private short rate;
 
     //Estimated time of arrival

@@ -1,6 +1,7 @@
-package com.example.csapi.model.enums;
+package com.example.csapi.model;
 
 import com.example.csapi.model.LiftGateDetails;
+import com.example.csapi.model.enums.CarType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,10 +12,10 @@ import lombok.NoArgsConstructor;
 public class CarData {
     String carId;
     CarType carType;
-    String carDims; //temp solution
+    CarDimensions carDims; //temp solution
     String carModel;
     String carYear;
-    String payload;
+    short payload;
     boolean dockHigh;
     boolean airRide;
     LiftGateDetails liftGateDetails;
